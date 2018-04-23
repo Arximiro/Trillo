@@ -60,31 +60,55 @@
 ////////////////////////
 // USER NAVIGATION
 .user-nav {
-  padding-right: 2rem;
+  align-self: stretch;
+  
   display: flex;
+  align-items: center;  
 
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+
+    display: flex;
+    align-items: center;    
+  }
+
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
 
   &__icon-box {
-    padding-right: 2rem;
+    position: relative;
   }
 
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
+    fill: var(--color-grey-dark-2);
+    
   }
 
   &__notification {
+    font-size: .8rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: white;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
 
-  }
-
-  &__user {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__user-photo {
     height: 3.75rem;
     border-radius: 50%;
-    
+    margin-right: 1rem;
   }
 
   &__user-name {
@@ -100,13 +124,14 @@
 
 
 // ---SUPER NOTES SECTION---
-// LOGO - height set for logo to be proper size
-// LOGO - margin-left to give element some breathing room
+// LOGO
+//    height: setting height auto sets width and vice versa
+//    margin-right: breathing room
 
 // SEARCH
 //    display: set to flex to align the button in the center along the cross axis
 //    flex: 0 0 40%. So no grow, not able to shrink, takes 40% of available space
-// SEARCH__input
+// SEARCH__INPUT
 //    font-family: font family is not inherited on inputs, so it must be set explicitly
 //    font-size: font size is not inherited on inputs, so it must be set explicitly
 //    color: color is not inherited on inputs, so it must be set explicitly
@@ -117,19 +142,55 @@
 //    width: set to 90% to take up 9/10 of what it can, so it can grow later when focused
 //    transition: set to .3s to allow a smooth transition when focused
 //    margin-right: set to -3 to push the input over so the button ends up on top
-// SEARCH__input:focus
+// SEARCH__INPUT:FOCUS
 //    outline: set to none to remove default blue border when focused
 //    width: set to 100% so box grows when focused
 //    background-color: set to darker coler for enhanced ux
-// SEARCH__button
+// SEARCH__BUTTON
 //    border: set to none to remove border
 //    background-color: set to transparent so only the icon shows
-// SEARCH__button:focus
+// SEARCH__BUTTON:FOCUS
 //    outline: set to none to remove default blue border when clicked
-// SEARCH__button:active
+// SEARCH__BUTTON:ACTIVE
 //    transform: set to translate 2px on the y axis to make it look like button is being pushed to user
-// SEARCH__icon
+// SEARCH__ICON
 //    height: set to 2rem or 20px
 //    width: set to 2rem or 20px
 
 // USER-NAV
+//    align-self: sets the user nav element to stretch inside its own parent flexbox
+//    display: set to flex to position children
+//    align-items:
+// USER-NAV > * (selects all DIRECT children of USER-NAV so icon-box and user)
+//    padding: breathing space
+//    cursor: hand pointer
+//    height: makes them take up the entire space they can
+//    display: makes the children inside of these flex children
+//    align-items: set to center so they center on the cross axis
+// USER-NAV > *:hover (selects all DIRECT children of USER-NAV when hovered)
+//    background-color: slightly darker when hovered
+// USER-NAV__ICON-BOX
+//    position: set to relative to allow notification bubble to be positioned absolutely
+// USER-NAV__ICON
+//  height: set
+//  width: set
+//  fill: paints the interior of the given icon
+// USER-NAV__NOTIFICATION
+//    font-size: set
+//    height: set
+//    width: set
+//    border-radius: set to give make bubbles round
+//    backgound-color: set to primary
+//    color: text color white
+//    position: set to absolute so they can be moved exactly into position
+//    top: 1.5rem down from the top
+//    right: 1rem from the right side
+//    display: set to flex to align the text inside each bubble
+//    justify-content: centers numbers on main axis
+//    align-items: centers numbers on cross axis
+// USER-NAV__USER-PHOTO
+//    height: width is auto set when you set height
+//    border-radius: set to make image perfectly round
+//    margin-right: gives space between user photo and text
+// USER-NAV__USER-NAME
+
