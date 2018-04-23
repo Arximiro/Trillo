@@ -1,0 +1,135 @@
+////////////////////////
+// LOGO
+.logo {
+  height: 3.25rem;
+  margin-left: 1rem;
+}
+
+
+////////////////////////
+// SEARCH BOX
+.search {
+  display: flex;
+  align-items: center;
+  flex: 0 0 40%;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 2rem;
+    width: 90%;
+    transition: all .3s;
+    margin-right: -3rem;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);      
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  &__button{
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+
+////////////////////////
+// USER NAVIGATION
+.user-nav {
+  padding-right: 2rem;
+  display: flex;
+
+
+  &__icon-box {
+    padding-right: 2rem;
+  }
+
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  &__notification {
+
+  }
+
+  &__user {
+
+  }
+
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+    
+  }
+
+  &__user-name {
+    
+  }
+}
+
+
+////////////////////////
+// HEADER END
+////////////////////////
+
+
+
+// ---SUPER NOTES SECTION---
+// LOGO - height set for logo to be proper size
+// LOGO - margin-left to give element some breathing room
+
+// SEARCH
+//    display: set to flex to align the button in the center along the cross axis
+//    flex: 0 0 40%. So no grow, not able to shrink, takes 40% of available space
+// SEARCH__input
+//    font-family: font family is not inherited on inputs, so it must be set explicitly
+//    font-size: font size is not inherited on inputs, so it must be set explicitly
+//    color: color is not inherited on inputs, so it must be set explicitly
+//    background-color: set to desired color for input
+//    border: set to none to remove normal input box border
+//    padding: set to give the inside of the input some breathing room
+//    border-radius: set to round the edges a bit to make the input look nicer
+//    width: set to 90% to take up 9/10 of what it can, so it can grow later when focused
+//    transition: set to .3s to allow a smooth transition when focused
+//    margin-right: set to -3 to push the input over so the button ends up on top
+// SEARCH__input:focus
+//    outline: set to none to remove default blue border when focused
+//    width: set to 100% so box grows when focused
+//    background-color: set to darker coler for enhanced ux
+// SEARCH__button
+//    border: set to none to remove border
+//    background-color: set to transparent so only the icon shows
+// SEARCH__button:focus
+//    outline: set to none to remove default blue border when clicked
+// SEARCH__button:active
+//    transform: set to translate 2px on the y axis to make it look like button is being pushed to user
+// SEARCH__icon
+//    height: set to 2rem or 20px
+//    width: set to 2rem or 20px
+
+// USER-NAV
