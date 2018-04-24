@@ -15,8 +15,11 @@
 <body>
   <div class="container">
 
-    <!-- HEADER START -->
+
+
+    <!-- HEADER -->
     <header class="header">
+      
 
       <img src="img/logo.png" alt="trillo logo" class="logo">
 
@@ -49,16 +52,18 @@
         </div>
       </nav>
 
-    </header>
-    <!-- HEADER END -->
 
+    </header>
+    <!-- HEADER -->
 
 
 
     <div class="content">
 
-      <!-- SIDEBAR START -->
+      <!-- SIDEBAR -->
       <nav class="sidebar">
+
+
         <ul class="side-nav">
           <li class="side-nav__item">
             <a href="#" class="side-nav__link">
@@ -97,14 +102,18 @@
         <div class="legal">
           A demo project by David Ridgley &copy;2018
         </div>
+
+
       </nav>
-      <!-- SIDEBAR END -->
+      <!-- SIDEBAR -->
 
 
 
 
-      <!-- HOTEL VIEW START -->
+      <!-- HOTEL VIEW -->
       <main class="hotel-view">
+
+
         <div class="gallery">
           <figure class="gallery__item">
             <img src="img/hotel-1.jpg" alt="hotel image" class="gallery__photo">
@@ -118,11 +127,9 @@
         </div>
 
         <div class="overview">
-
           <h1 class="overview__heading">
             Hotel D'Caprico
           </h1>
-
           <div class="overview__stars">
             <svg class="overview__icon-star">
               <use href="img/sprite.svg#icon-star"></use>
@@ -140,7 +147,6 @@
               <use href="img/sprite.svg#icon-star"></use>
             </svg>
           </div>
-
 
           <div class="overview__location">
             <svg class="overview__icon-location">
@@ -188,9 +194,37 @@
           </div>
 
           <div class="user-reviews">
-            User Reviews
+            <figure class="review">
+              <blockquote class="review__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
+              </blockquote>
+              <figcaption class="review__user">
+                <img src="img/user-1.jpg" alt="" class="review__photo">
+                <div class="review__user-box">
+                  <p class="review__user-name">Nick Smith</p>
+                  <p class="review__user-date">Mar 15th, 2017</p>
+                </div>
+                <div class="review__rating">4.5</div>
+              </figcaption>
+            </figure>
+            <figure class="review">
+              <blockquote class="review__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
+              </blockquote>
+              <figcaption class="review__user">
+                <img src="img/user-2.jpg" alt="" class="review__photo">
+                <div class="review__user-box">
+                  <p class="review__user-name">Mary Thomas</p>
+                  <p class="review__user-date">Nov 2nd, 2017</p>
+                </div>
+                <div class="review__rating">4.8</div>
+              </figcaption>
+            </figure>
+
+            <button class="btn-inline">Show all <span>&rarr;</span></button>
           </div>
         </div>
+        
 
       </main>
       <!-- HOTEL VIEW END -->
