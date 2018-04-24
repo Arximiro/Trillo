@@ -20,17 +20,22 @@
 }
 
 .content {
-  display: flex;  
+  display: flex;
+
+  height: 80rem;
 }
 
 .sidebar { 
  background-color: var(--color-grey-dark-1);
  flex: 0 0 18%;
- height: 75rem;
+ 
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
 }
 
 .hotel-view {
-  background-color: grey;
+  background-color: #fff;
   flex: 0 0 82%;
 }
 
