@@ -9,7 +9,8 @@
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem (0,0,0,.3); }
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06); }
 
 *,
 *::after,
@@ -221,8 +222,7 @@ body {
   align-items: center; }
 
 .content {
-  display: flex;
-  height: 80rem; }
+  display: flex; }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -234,3 +234,21 @@ body {
 .hotel-view {
   background-color: #fff;
   flex: 0 0 82%; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: 1px solid var(--color-grey-light-2); }
+
+.description {
+  font-size: 1.4rem;
+  background-color: white;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem; }
+
+.user-reviews {
+  background-color: orange;
+  flex: 1; }
