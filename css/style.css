@@ -106,32 +106,34 @@ body {
     margin-right: 1rem; }
 
 .side-nav {
-  padding-left: 1rem; }
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  margin-top: 2.5rem; }
   .side-nav__item {
-    list-style: none; }
+    list-style: none;
+    margin-bottom: 1rem; }
   .side-nav__link {
     display: flex;
     align-items: center; }
     .side-nav__link:link, .side-nav__link:visited {
       text-decoration: none;
       text-transform: uppercase;
-      color: white;
+      color: var(--color-grey-light-1);
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-primary));
       background-size: 200%;
       transition: all .4s; }
     .side-nav__link:hover, .side-nav__link:active {
       background-position: 100%; }
   .side-nav__icon {
-    height: 3.5rem;
-    width: 3.5rem;
-    fill: white;
-    order: -1;
+    height: 3rem;
+    width: 3rem;
+    fill: currentColor;
     padding-right: 1rem; }
 
 .legal {
   font-size: 1.2rem;
   text-align: center;
-  padding: 2.5rem;
+  padding-bottom: 2.5rem;
   color: var(--color-grey-light-4); }
 
 .container {

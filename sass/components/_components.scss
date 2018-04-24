@@ -204,9 +204,12 @@
 
 .side-nav {
   padding-left: 1rem;
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
 
   &__item {
     list-style: none;
+    margin-bottom: 1rem;   
   }
 
   &__link, {
@@ -217,7 +220,7 @@
     &:visited {
       text-decoration: none;
       text-transform: uppercase;
-      color: white;
+      color: var(--color-grey-light-1);
       background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-primary));
       background-size: 200%;
       transition: all .4s;
@@ -230,10 +233,9 @@
   }
 
   &__icon {
-    height: 3.5rem;
-    width: 3.5rem;
-    fill: white;
-    order: -1;
+    height: 3rem;
+    width: 3rem;
+    fill: currentColor;
     padding-right: 1rem;
   }  
 }
@@ -242,6 +244,38 @@
 .legal {
   font-size: 1.2rem;
   text-align: center;
-  padding: 2.5rem;
+  padding-bottom: 2.5rem;
   color: var(--color-grey-light-4);
 }
+
+
+// SIDE-NAV
+//    padding-left: gets everything off the left edge of the sidebar
+//    font-size: self explanatory
+//    margin-top: pushes items down from the top of the sidebar a bit
+// SIDE-NAV__ITEM
+//    list-style: turn off the default bullet points of a li inside a ul
+//    margin-bottom: gives a little space below each element to let them breathe
+// SIDE-NAV__LINK
+//    display: set to flex so the item and the span text inside the link can be positioned
+//    align-items: set to center to center both along the cross axis
+// SIDE-NAV__LINK:link :visisted
+//    text-decoration: remove the link underline
+//    text-transform: make all text uppercase
+//    color: set color of text
+//    background-image: set to a 120deg linear gradient that goes from 0 to 50% as transparent, then the rest is primary color
+//    background-size: set to 200% so it is pushed off the screen out of view
+//    transition: all .4s for transitions
+// SIDE-NAV__LINK:visited :active
+//    background-position: over .4s, the background will come into view ending up at 100%
+// SIDE-NAV__ICON
+//    height: set icon height
+//    width: set icon height
+//    fill: paints the icon the current color ie the color of the parent which is link
+//    padding-right: gives some space between the icon and the text
+
+// LEGAL
+//    font-size: yes
+//    text-align: yep
+//    padding-bottom: breathing room from bottom
+//    color: set text color
