@@ -21,6 +21,9 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
@@ -41,11 +44,16 @@ body {
   display: flex;
   align-items: center;
   flex: 0 0 40%; }
+  @media only screen and (max-width: 28.125em) {
+    .search {
+      flex: 0 0 100%;
+      order: 1;
+      background-color: var(--color-grey-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    background-color: var(--color-grey-light-1);
+    background-color: var(--color-grey-light-2);
     border: none;
     padding: .7rem 2rem;
     border-radius: 2rem;
@@ -55,10 +63,10 @@ body {
     .search__input:focus {
       outline: none;
       width: 100%;
-      background-color: var(--color-grey-light-2); }
+      background-color: var(--color-grey-light-3); }
     .search__input::-webkit-input-placeholder {
       font-weight: 100;
-      color: var(--color-grey-light-4); }
+      color: var(--color-grey-dark-3); }
   .search__button {
     border: none;
     background-color: transparent; }
@@ -110,9 +118,18 @@ body {
   padding-left: 1rem;
   font-size: 1.2rem;
   margin-top: 2.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      justify-content: space-around;
+      margin: 0; } }
   .side-nav__item {
     list-style: none;
     margin-bottom: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        margin-bottom: 0;
+        padding: 1rem 0; } }
   .side-nav__link {
     display: flex;
     align-items: center; }
@@ -136,6 +153,9 @@ body {
   text-align: center;
   padding-bottom: 2.5rem;
   color: var(--color-grey-light-4); }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -152,6 +172,10 @@ body {
     font-weight: 300;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 42.1875em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -171,9 +195,15 @@ body {
     color: var(--color-grey-light-2);
     padding: 1.5rem;
     text-align: center; }
+    @media only screen and (max-width: 42.1875em) {
+      .overview__rating {
+        padding: .5rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300; }
+    @media only screen and (max-width: 42.1875em) {
+      .overview__rating-average {
+        font-size: 1.8rem; } }
   .overview__rating-count {
     font-size: 1rem; }
 
@@ -216,6 +246,9 @@ body {
   border-top: 2px solid var(--color-grey-light-1);
   display: flex;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 28.125em) {
+    .list {
+      font-size: 1.2rem; } }
   .list__item {
     flex: 0 0 50%;
     margin-bottom: .7rem; }
@@ -225,11 +258,16 @@ body {
     height: 1rem;
     width: 1rem;
     margin-right: .7rem;
-    background-color: var(--color-primary);
-    -webkit-mask-image: url(../../img/chevron-thin-right.svg);
-    -webkit-mask-size: cover;
-    mask-image: url(../../img/chevron-thin-right.svg);
-    mask-size: cover; }
+    background-image: url(../../img/chevron-thin-right.svg);
+    background-size: cover; }
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      .list__item::before {
+        background-image: none;
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../../img/chevron-thin-right.svg);
+        mask-size: cover; } }
 
 .recommend {
   font-size: 1.3rem;
@@ -237,6 +275,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     height: 4rem;
     width: 4rem;
@@ -244,7 +284,7 @@ body {
     border: 3px solid white;
     box-sizing: content-box; }
     .recommend__photo:not(:last-child) {
-      margin-right: -1.5rem; }
+      margin-right: -2rem; }
 
 .review {
   background-color: white;
@@ -253,6 +293,10 @@ body {
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 3rem; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 2;
@@ -288,6 +332,9 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      padding: 2.5rem 0; } }
   .cta__book-now {
     font-size: 1.8rem;
     font-weight: 300;
@@ -328,10 +375,13 @@ body {
     animation: pulsate 1s infinite; }
 
 .container {
-  max-width: 120rem;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
   margin: 8rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
+  margin: 0;
   min-height: 50rem; }
 
 .header {
@@ -342,9 +392,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 28.125em) {
+    .header {
+      flex-wrap: wrap;
+      height: 10rem;
+      align-content: space-around; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -363,6 +421,12 @@ body {
   font-size: 1.4rem;
   background-color: var(--color-grey-light-1);
   border-bottom: 1px solid var(--color-grey-light-2); }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 3rem; } }
+  @media only screen and (max-width: 42.1875em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: white;
@@ -370,6 +434,14 @@ body {
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      padding: 2rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 42.1875em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   flex: 1;
