@@ -1,4 +1,8 @@
 ////////////////////////
+// HEADER BEGIN
+////////////////////////
+
+////////////////////////
 // LOGO
 .logo {
   height: 3.25rem;
@@ -117,82 +121,9 @@
     margin-right: 1rem;
   }
 }
-
-// ---SUPER NOTES SECTION---
-// LOGO
-//    height: setting height auto sets width and vice versa
-//    margin-right: breathing room
-
-// SEARCH
-//    display: set to flex to align the button in the center along the cross axis
-//    flex: 0 0 40%. So no grow, not able to shrink, takes 40% of available space
-// SEARCH__INPUT
-//    font-family: font family is not inherited on inputs, so it must be set explicitly
-//    font-size: font size is not inherited on inputs, so it must be set explicitly
-//    color: color is not inherited on inputs, so it must be set explicitly
-//    background-color: set to desired color for input
-//    border: set to none to remove normal input box border
-//    padding: set to give the inside of the input some breathing room
-//    border-radius: set to round the edges a bit to make the input look nicer
-//    width: set to 90% to take up 9/10 of what it can, so it can grow later when focused
-//    transition: set to .3s to allow a smooth transition when focused
-//    margin-right: set to -3 to push the input over so the button ends up on top
-// SEARCH__INPUT:FOCUS
-//    outline: set to none to remove default blue border when focused
-//    width: set to 100% so box grows when focused
-//    background-color: set to darker coler for enhanced ux
-// SEARCH__BUTTON
-//    border: set to none to remove border
-//    background-color: set to transparent so only the icon shows
-// SEARCH__BUTTON:FOCUS
-//    outline: set to none to remove default blue border when clicked
-// SEARCH__BUTTON:ACTIVE
-//    transform: set to translate 2px on the y axis to make it look like button is being pushed to user
-// SEARCH__ICON
-//    height: set to 2rem or 20px
-//    width: set to 2rem or 20px
-
-// USER-NAV
-//    align-self: sets the user nav element to stretch inside its own parent flexbox
-//    display: set to flex to position children
-//    align-items:
-// USER-NAV > * (selects all DIRECT children of USER-NAV so icon-box and user)
-//    padding: breathing space
-//    cursor: hand pointer
-//    height: makes them take up the entire space they can
-//    display: makes the children inside of these flex children
-//    align-items: set to center so they center on the cross axis
-// USER-NAV > *:hover (selects all DIRECT children of USER-NAV when hovered)
-//    background-color: slightly darker when hovered
-// USER-NAV__ICON-BOX
-//    position: set to relative to allow notification bubble to be positioned absolutely
-// USER-NAV__ICON
-//  height: set
-//  width: set
-//  fill: paints the interior of the given icon
-// USER-NAV__NOTIFICATION
-//    font-size: set
-//    height: set
-//    width: set
-//    border-radius: set to give make bubbles round
-//    backgound-color: set to primary
-//    color: text color white
-//    position: set to absolute so they can be moved exactly into position
-//    top: 1.5rem down from the top
-//    right: 1rem from the right side
-//    display: set to flex to align the text inside each bubble
-//    justify-content: centers numbers on main axis
-//    align-items: centers numbers on cross axis
-// USER-NAV__USER-PHOTO
-//    height: width is auto set when you set height
-//    border-radius: set to make image perfectly round
-//    margin-right: gives space between user photo and text
-// USER-NAV__USER-NAME
-
-
-////////////////////////
+//////////////////////////////////////////////////
 // HEADER END
-////////////////////////
+//////////////////////////////////////////////////
 
 
 
@@ -200,10 +131,12 @@
 
 
 
-////////////////////////
+
+
+
+//////////////////////////////////////////////////
 // SIDEBAR BEGIN
-////////////////////////
-
+//////////////////////////////////////////////////
 
 ////////////////////////
 // SIDEBAR
@@ -268,52 +201,22 @@
     display: none;
   }
 }
-
-
-// SIDE-NAV
-//    padding-left: gets everything off the left edge of the sidebar
-//    font-size: self explanatory
-//    margin-top: pushes items down from the top of the sidebar a bit
-// SIDE-NAV__ITEM
-//    list-style: turn off the default bullet points of a li inside a ul
-//    margin-bottom: gives a little space below each element to let them breathe
-// SIDE-NAV__LINK
-//    display: set to flex so the item and the span text inside the link can be positioned
-//    align-items: set to center to center both along the cross axis
-// SIDE-NAV__LINK:link :visisted
-//    text-decoration: remove the link underline
-//    text-transform: make all text uppercase
-//    color: set color of text
-//    background-image: set to a 120deg linear gradient that goes from 0 to 50% as transparent, then the rest is primary color
-//    background-size: set to 200% so it is pushed off the screen out of view
-//    transition: all .4s for transitions
-// SIDE-NAV__LINK:visited :active
-//    background-position: over .4s, the background will come into view ending up at 100%
-// SIDE-NAV__ICON
-//    height: set icon height
-//    width: set icon height
-//    fill: paints the icon the current color ie the color of the parent which is link
-//    padding-right: gives some space between the icon and the text
-
-// LEGAL
-//    font-size: yes
-//    text-align: yep
-//    padding-bottom: breathing room from bottom
-//    color: set text color
-
-
-////////////////////////
+//////////////////////////////////////////////////
 // SIDEBAR END
-////////////////////////
+//////////////////////////////////////////////////
 
 
 
 
 
 
-////////////////////////
+
+
+
+
+//////////////////////////////////////////////////
 // HOTEL VIEW BEGIN
-////////////////////////
+//////////////////////////////////////////////////
 
 ////////////////////////
 // PHOTO GALLERY
@@ -398,6 +301,7 @@
 
 }
 
+
 ////////////////////////
 // LOCATION BUTTON
 .btn-inline {
@@ -430,6 +334,7 @@
   }
 }
 
+
 ////////////////////////
 // CUSTOM ANIMATION
 @keyframes pulsate {
@@ -452,6 +357,7 @@
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem;
 }
+
 
 ////////////////////////
 // LIST
@@ -590,6 +496,7 @@
   }
 }
 
+
 ////////////////////////
 // CALL TO ACTION
 .cta {
@@ -655,3 +562,6 @@
     animation: pulsate 1s infinite;
   }
 }
+//////////////////////////////////////////////////
+// HOTEL VIEW END
+//////////////////////////////////////////////////
